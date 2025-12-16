@@ -728,6 +728,11 @@ but was of type '{type(shape_str)}'")
         """
         return the current puzzle state for the ai based on self.color_list
         """
+        if not hasattr(self, "color_list"):
+            self.color_list = []
+            for color in self.SOLVED_STATE:
+                if not color in self.color_list:
+                    self.color_list.append(color)
         ai_state = []
 
         for color in [obj.color for obj in self.vpy_objects]:
@@ -960,7 +965,7 @@ but was of type '{type(shape_str)}'")
         print(f"Loaded RL agent from {colored(model_path, arg_color)}.")
 
 
-    def move_nn(self, num_moves, arg_color="#0066ff"):
+    def move_nn(self, num_moves, arg_color="#0066ff", verbose=True):
         """
         make one move based on the current Q-table of the AI
         
@@ -984,10 +989,12 @@ but was of type '{type(shape_str)}'")
             reward, done = self.nn_solver.reward_func(np.array(self._get_ai_nn_state()), truncated=False)
             # print move info
             ai_move_str = f"{ai_move:{max_move_name_len}}"
-            print(f"made move: {colored(ai_move_str, arg_color)}  Reward for new state: {reward}")
+            if verbose:
+                print(f"made move: {colored(ai_move_str, arg_color)}  Reward for new state: {reward}")
             # check if puzzle is solved
             if done or self._get_ai_nn_state() == self.nn_solver.solved_state:
-                print(f"Puzzle was solved after {colored(str(i+1), arg_color)} moves.")
+                if verbose:
+                    print(f"Puzzle was solved after {colored(str(i+1), arg_color)} moves.")
                 break
 
 
@@ -995,16 +1002,24 @@ but was of type '{type(shape_str)}'")
         """
         solve the puzzle based on the current Q-table of the AI
         """
-        solve_moves = solve_puzzle(self._get_ai_state(),
-                                   self.moves,
-                                   self.nn_solver.SOLVED_STATE,
-                                   self.nn_solver,
-                                   max_time=max_time,
-                                   WEIGHT=WEIGHT)
-        if not solve_moves == "":
-            print(f"solved the puzzle after {colored(str(len(solve_moves.split(' '))), arg_color)} moves:")
-            print(f"{colored(solve_moves, arg_color)}")
-            self.perform_move(solve_moves)
+        try:
+            index = 0
+            while index < max_time:
+                index +=1
+                self.move_nn(1, verbose=False)
+                reward, done = self.nn_solver.reward_func(np.array(self._get_ai_nn_state()), truncated=False)
+                if done:
+                    print(f"Solved the puzzle after {index} moves.")
+                    break
+            if not done:
+                print(f"Puzzle could not be solved after {index} moves.")
+
+        except Exception as E:
+            print(E)
+        # if not solve_moves == "":
+        #     print(f"solved the puzzle after {colored(str(len(solve_moves.split(' '))), arg_color)} moves:")
+        #     print(f"{colored(solve_moves, arg_color)}")
+        #     self.perform_move(solve_moves)
         # solve_moves = ""
         # last_moves = []
         # for n in range(max_moves):

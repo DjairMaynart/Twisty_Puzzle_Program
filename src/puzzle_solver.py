@@ -17,7 +17,7 @@ def solve_puzzle(
         ACTIONS_DICT: dict[str, list[list[int]]],
         SOLVED_STATE: list[int],
         ai_class: Puzzle_Q_AI | Puzzle_V_AI | Greedy_Puzzle_Solver,
-        max_time: float = 60,
+        max_time: float = 100,
         WEIGHT: float = 0.1):
     """
     The the puzzle starting from [start_state] and find a sequence of actions that leads to the solved state. This uses a weighted A* search algorithm where the distance-to-goal heuristic is determined by the given ai_class.
@@ -30,7 +30,7 @@ def solve_puzzle(
         ai_class - (Puzzle_Q_AI) or (Puzzle_V_AI) or (Puzzle_Network) - an instance of the Q/V-learning puzzle class or the puzzle network class
             this determines what is used for the solving process
             the Q/V-table or neural network should already be loaded.
-        max_time - (float) - maximum time (in seconds) allowed for finding the solution
+        max_time - (float) - maximum time (in number of moves) allowed for finding the solution
         WEIGHT - (float) - weight for weighted A* search. 1 for normal A*
 
     returns:
@@ -45,15 +45,14 @@ def solve_puzzle(
     def seq_length_from_key(key):
         return len(key[1])
 
-    end_time = time.time() + max_time
-
     # open_states = {():(0, start_state)} # init starting state with value 0, no actions taken so far
     open_states = SortedDict({(0,()):tuple(start_state)})
     # open_states = SortedDict({(0, ): start_state})
     closed_states = dict()
 
-
-    while time.time() < end_time:
+    index = 0
+    while index < max_time:
+        index += 1
         # best_action_seq = max(open_states, key=_get_key)
         # best_action_seq = open_states.peekitem(index=-1)
         # value, puzzle_state = open_states[best_action_seq]
