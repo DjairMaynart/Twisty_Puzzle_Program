@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<puzzledefinition name="hypercuboid_1x1x2x2" state_space_size="96">
+  <points>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="0.25"/>
+      <color r="1.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="0.25"/>
+      <color r="0.5" g="0.0" b="0.5"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.5" z="0.25"/>
+      <color r="1.0" g="1.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="0.5" z="0.25"/>
+      <color r="1.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.5" y="1.0" z="0.25"/>
+      <color r="0.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="-0.5" y="1.0" z="0.25"/>
+      <color r="0.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="0.75"/>
+      <color r="1.0" g="0.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-0.5" z="0.25"/>
+      <color r="1.0" g="1.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.5" z="0.25"/>
+      <color r="1.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.5" y="-1.0" z="0.25"/>
+      <color r="0.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="-0.5" y="-1.0" z="0.25"/>
+      <color r="0.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="0.75"/>
+      <color r="1.0" g="0.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="-0.25"/>
+      <color r="1.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="-0.25"/>
+      <color r="0.5" g="0.0" b="0.5"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.5" z="-0.25"/>
+      <color r="1.0" g="1.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="0.5" z="-0.25"/>
+      <color r="1.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.5" y="1.0" z="-0.25"/>
+      <color r="0.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="-0.5" y="1.0" z="-0.25"/>
+      <color r="0.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="-0.75"/>
+      <color r="1.0" g="0.5" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-0.5" z="-0.25"/>
+      <color r="1.0" g="1.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.5" z="-0.25"/>
+      <color r="1.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.5" y="-1.0" z="-0.25"/>
+      <color r="0.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="-0.5" y="-1.0" z="-0.25"/>
+      <color r="0.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="-0.75"/>
+      <color r="1.0" g="0.5" b="0.0"/>
+    </point>
+  </points>
+  <moves>
+    <move name="R">
+      <cycle>0, 12</cycle>
+      <cycle>2, 14</cycle>
+      <cycle>3, 15</cycle>
+      <cycle>4, 17</cycle>
+      <cycle>5, 16</cycle>
+      <cycle>6, 18</cycle>
+    </move>
+    <move name="F">
+      <cycle>0, 12</cycle>
+      <cycle>2, 15</cycle>
+      <cycle>3, 14</cycle>
+      <cycle>4, 16</cycle>
+      <cycle>5, 17</cycle>
+      <cycle>6, 18</cycle>
+    </move>
+    <move name="U">
+      <cycle>2, 5, 3, 4</cycle>
+      <cycle>14, 17, 15, 16</cycle>
+    </move>
+    <move name="U'">
+      <cycle>2, 4, 3, 5</cycle>
+      <cycle>14, 16, 15, 17</cycle>
+    </move>
+    <move name="U#R">
+      <cycle>0, 1</cycle>
+      <cycle>2, 7</cycle>
+      <cycle>3, 8</cycle>
+      <cycle>4, 10</cycle>
+      <cycle>5, 9</cycle>
+      <cycle>6, 11</cycle>
+    </move>
+    <move name="U#F">
+      <cycle>0, 1</cycle>
+      <cycle>2, 8</cycle>
+      <cycle>3, 7</cycle>
+      <cycle>4, 9</cycle>
+      <cycle>5, 10</cycle>
+      <cycle>6, 11</cycle>
+    </move>
+    <move name="U#U">
+      <cycle>2, 5, 3, 4</cycle>
+      <cycle>7, 10, 8, 9</cycle>
+    </move>
+    <move name="U#U'">
+      <cycle>2, 4, 3, 5</cycle>
+      <cycle>7, 9, 8, 10</cycle>
+    </move>
+  </moves>
+</puzzledefinition>
+	

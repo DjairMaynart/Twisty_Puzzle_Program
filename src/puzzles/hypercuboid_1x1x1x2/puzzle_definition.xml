@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<puzzledefinition name="hypercuboid_1x1x1x2" state_space_size="24">
+  <points>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="0.0"/>
+      <color r="1.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="0.0"/>
+      <color r="0.5" g="0.0" b="0.5"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.5" z="0.0"/>
+      <color r="1.0" g="1.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="0.5" z="0.0"/>
+      <color r="1.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.5" y="1.0" z="0.0"/>
+      <color r="0.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="-0.5" y="1.0" z="0.0"/>
+      <color r="0.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="-0.5"/>
+      <color r="1.0" g="0.5" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="1.0" z="0.5"/>
+      <color r="1.0" g="0.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-0.5" z="0.0"/>
+      <color r="1.0" g="1.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.5" z="0.0"/>
+      <color r="1.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.5" y="-1.0" z="0.0"/>
+      <color r="0.0" g="0.0" b="1.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="-0.5" y="-1.0" z="0.0"/>
+      <color r="0.0" g="1.0" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="-0.5"/>
+      <color r="1.0" g="0.5" b="0.0"/>
+    </point>
+    <point size="10.0">
+      <coords x="0.0" y="-1.0" z="0.5"/>
+      <color r="1.0" g="0.0" b="0.0"/>
+    </point>
+  </points>
+  <moves>
+    <move name="R'">
+      <cycle>4, 7, 5, 6</cycle>
+    </move>
+    <move name="R">
+      <cycle>4, 6, 5, 7</cycle>
+    </move>
+    <move name="F">
+      <cycle>7, 3, 6, 2</cycle>
+    </move>
+    <move name="F'">
+      <cycle>7, 2, 6, 3</cycle>
+    </move>
+    <move name="U">
+      <cycle>4, 2, 5, 3</cycle>
+    </move>
+    <move name="U'">
+      <cycle>4, 3, 5, 2</cycle>
+    </move>
+  </moves>
+</puzzledefinition>
+	
