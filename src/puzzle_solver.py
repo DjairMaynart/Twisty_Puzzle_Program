@@ -10,13 +10,14 @@ from .ai_modules.twisty_puzzle_model import perform_action
 from .ai_modules.q_puzzle_class import Puzzle_Q_AI
 from .ai_modules.v_puzzle_class import Puzzle_V_AI
 from .ai_modules.greedy_solver import Greedy_Puzzle_Solver
+from .ai_modules.llm_puzzle_solver import LLM_Puzzle_Solver
 # from .ai_modules.nn_puzzle_class import Puzzle_Network
 
 def solve_puzzle(
         start_state: list[int],
         ACTIONS_DICT: dict[str, list[list[int]]],
         SOLVED_STATE: list[int],
-        ai_class: Puzzle_Q_AI | Puzzle_V_AI | Greedy_Puzzle_Solver,
+        ai_class: Puzzle_Q_AI | Puzzle_V_AI | Greedy_Puzzle_Solver | LLM_Puzzle_Solver,
         max_time: float = 100,
         WEIGHT: float = 0.1):
     """
@@ -65,10 +66,12 @@ def solve_puzzle(
                                         WEIGHT=WEIGHT)
         if solution_sequence is not None:
             print(f"Searched {len(closed_states) + len(open_states)} state-action pairs to find a solution.")
-            print(f"Maximum search depth was {max([seq_length_from_key(key) for key in open_states.keys()])} moves.")
+            if open_states:
+                print(f"Maximum search depth was {max([seq_length_from_key(key) for key in open_states.keys()])} moves.")
             return " ".join(solution_sequence)
     print(f"Searched {len(closed_states) + len(open_states)} state-action pairs but found no solution.")
-    print(f"Maximum search depth was {max([seq_length_from_key(key) for key in open_states.keys()])} moves.")
+    if open_states:
+        print(f"Maximum search depth was {max([seq_length_from_key(key) for key in open_states.keys()])} moves.")
     return ""
 
 
