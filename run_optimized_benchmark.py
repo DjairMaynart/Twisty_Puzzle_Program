@@ -36,7 +36,7 @@ PUZZLES = [
 ]
 
 MAX_MOVES = 1000
-MODEL = "qwen3:8b"
+MODEL = "llama3.1:8b"  # Mais rapido que qwen3, ~2s por movimento
 
 
 def solve_with_optimized_llm(solved_state, actions_dict, scrambled, max_moves=1000, max_time=99999):

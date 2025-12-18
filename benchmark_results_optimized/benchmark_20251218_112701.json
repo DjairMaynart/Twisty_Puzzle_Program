@@ -1,0 +1,130 @@
+[
+  {
+    "success": true,
+    "moves": 2,
+    "time": 26.988937616348267,
+    "puzzle": "1x1x1x2",
+    "puzzle_file": "hypercuboid_1x1x1x2",
+    "num_pieces": 2,
+    "initial_correct": 8,
+    "total_stickers": 14
+  },
+  {
+    "success": true,
+    "moves": 2,
+    "time": 20.001529455184937,
+    "puzzle": "1x1x1x3",
+    "puzzle_file": "hypercuboid_1x1x1x3",
+    "num_pieces": 3,
+    "initial_correct": 14,
+    "total_stickers": 20
+  },
+  {
+    "success": true,
+    "moves": 8,
+    "time": 119.84913086891174,
+    "puzzle": "1x1x2x2",
+    "puzzle_file": "hypercuboid_1x1x2x2",
+    "num_pieces": 4,
+    "initial_correct": 10,
+    "total_stickers": 24
+  },
+  {
+    "success": true,
+    "moves": 3,
+    "time": 42.946412324905396,
+    "puzzle": "1x1x2x3",
+    "puzzle_file": "hypercuboid_1x1x2x3",
+    "num_pieces": 6,
+    "initial_correct": 14,
+    "total_stickers": 34
+  },
+  {
+    "success": false,
+    "moves": 20,
+    "time": 308.7916581630707,
+    "final_correct": 32,
+    "total_positions": 48,
+    "puzzle": "1x1x3x3",
+    "puzzle_file": "hypercuboid_1x1x3x3",
+    "num_pieces": 9,
+    "initial_correct": 26,
+    "total_stickers": 48
+  },
+  {
+    "success": false,
+    "moves": 20,
+    "time": 315.4363658428192,
+    "final_correct": 24,
+    "total_positions": 40,
+    "puzzle": "1x2x2x2",
+    "puzzle_file": "hypercuboid_1x2x2x2",
+    "num_pieces": 8,
+    "initial_correct": 19,
+    "total_stickers": 40
+  },
+  {
+    "puzzle": "1x2x2x3",
+    "num_pieces": 12,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "1x2x3x3",
+    "num_pieces": 18,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "1x3x3x3",
+    "num_pieces": 27,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "2x2x2x2",
+    "num_pieces": 16,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "2x2x2x3",
+    "num_pieces": 24,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "2x2x3x3",
+    "num_pieces": 36,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "2x3x3x3",
+    "num_pieces": 54,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  },
+  {
+    "puzzle": "3x3x3x3",
+    "num_pieces": 80,
+    "success": false,
+    "error": "skipped",
+    "moves": 0,
+    "time": 0
+  }
+]
