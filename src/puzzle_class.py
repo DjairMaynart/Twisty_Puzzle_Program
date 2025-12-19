@@ -1011,6 +1011,8 @@ but was of type '{type(shape_str)}'")
                 if done:
                     print(f"Solved the puzzle after {index} moves.")
                     break
+            if index % 100 == 0:
+                print(f"{index} moves tried.")
             if not done:
                 print(f"Puzzle could not be solved after {index} moves.")
 
